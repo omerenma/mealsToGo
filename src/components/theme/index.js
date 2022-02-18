@@ -6,7 +6,7 @@ import { fontSizes, fontWeights, fonts } from "./fonts";
 import { sizes } from "./sizes";
 import { lineHeights, space } from "./spacing";
 import { Card } from "react-native-paper";
-import {Text} from "../typography/TextComponent"
+import { Text } from "../typography/TextComponent";
 export const theme = {
 	colors,
 	fontSizes,
@@ -25,7 +25,6 @@ margin-left: ${(props) => props.theme.space[4]}
 
 `;
 
-
 // export const Title = styled.Text`
 // 	font-size:${(props) => props.theme.fontSizes.body}
 // 	font-family:${(props) => props.theme.fonts.body};
@@ -36,8 +35,8 @@ margin-left: ${(props) => props.theme.space[4]}
 
 export const RestauranCard = styled(Card)`
 	background-color: ${(props) => props.theme.colors.bg.primary};
-	 margin-top: ${props => props.theme.space[4]};
-	 padding"${props => props.theme.space[4]}
+	 margin-top: ${(props) => props.theme.space[4]};
+	 padding"${(props) => props.theme.space[4]}
 `;
 export const CardCover = styled(Card.Cover)`
 	padding: ${(props) => props.theme.sizes[1]};
@@ -50,6 +49,7 @@ export const SafeArea = styled(SafeAreaView)`
 `;
 export const SearchView = styled(View)`
 	padding: ${(props) => props.theme.space[3]};
+	margin-top: ${(props) => props.theme.space[3]};
 `;
 export const RestInfoView = styled(View)`
 	flex: 1;

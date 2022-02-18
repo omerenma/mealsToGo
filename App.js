@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React from "react";
 
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import {
@@ -7,10 +7,10 @@ import {
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import AppLoading from "expo-app-loading";
-import { RestaurantScreen } from "./src/components/features/restaurants/components/RestaurantScreen";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/components/theme/index";
 import { NavigationScreen } from "./src/navigations/TabNavigation";
+import { RestaurantContextProvider } from "./src/services/restaurants/mock/restaurants.context";
 
 // const isAndroid = Platform.OS === "android";
 
@@ -29,7 +29,9 @@ export default function App() {
 		<>
 			<ThemeProvider theme={theme}>
 				{/* <RestaurantScreen /> */}
-				<NavigationScreen />
+				<RestaurantContextProvider>
+					<NavigationScreen />
+				</RestaurantContextProvider>
 				<ExpoStatusBar style="auto" />
 			</ThemeProvider>
 		</>
